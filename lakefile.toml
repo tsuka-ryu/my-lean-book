@@ -4,3 +4,4 @@ defaultTargets = ["MyLeanBook"]
 
 [[lean_lib]]
 name = "MyLeanBook"
+globs = ["MyLeanBook.+"]
