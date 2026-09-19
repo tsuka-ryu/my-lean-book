@@ -1,0 +1,6 @@
+name = "my-lean-book"
+version = "0.1.0"
+defaultTargets = ["MyLeanBook"]
+
+[[lean_lib]]
+name = "MyLeanBook"
