@@ -134,3 +134,44 @@ example (P : Prop) : ¬¬ (P ∨ ¬ P) := by
 
   -- これは矛盾
   contradiction
+
+example (P : Prop) : (P → True) ↔ True := by
+  exact?
+
+example (P : Prop) : (True → P) ↔ P := by
+  exact?
+
+example (P Q : Prop) (h : ¬P ↔ Q) : (P → False) ↔ Q := by
+  rw [show (P → False) ↔ ¬ P from by rfl]
+  rw [h]
+
+example : P → P := by
+  intro hp
+  exact hp
+
+/--
+  P ↔ ¬P（P と ¬P が同値）になることはありえない、を示す
+  「この文は偽である」という嘘つきのパラドクスをLeanでは作れないらしい
+  「この文は偽である」を形にすると、自分自身の否定と同値な命題 L ↔ ¬L になります。これを作るには、L の定義の中で L を使わなければいけません。
+  Lean では、これは再帰的な定義として扱われます。そして Lean は再帰定義に対して「必ず有限回で止まること」の証明を要求します。
+  L には引数がなく、呼び出すたびに減っていくものが何もありません。¬L を展開すると ¬¬L、さらに ¬¬¬L… と無限に続き、決して止まりません。だから停止性を示せず、定義そのものが却下されます。
+  Lean の定義は「すでに存在するものだけを使って組み立てる」という積み上げ式なので、自分自身を含む命題は、そもそも書く手段がありません。
+ -/
+example (P : Prop) : ¬ (P ↔ ¬ P) := by
+  intro h
+
+  have hnp : ¬ P := by
+    intro hq
+    have : ¬ P := by
+      rw [h] at hq
+      exact hq
+    contradiction
+
+  have hp : P := by
+    rw [← h] at hnp
+    exact hnp
+  contradiction
+
+-- 1. P だとすると → 同値性から ¬P になる → 矛盾 → よって ¬P      （前半）
+-- 2. ¬P が言えた → 同値性から P も言える                        （後半）
+-- 3. P と ¬P がそろった → 矛盾                                  （最後）
