@@ -12,3 +12,5 @@
 | [lp.md](lp.md) | 命題論理の公理系 LP（サンプル2＋二重否定・∨の規則）と諸定理 | |
 | [lean.md](lean.md) | 命題論理と Lean の対応（規則とタクティク、¬ と False、古典論理） | |
 | [pred-basics.md](pred-basics.md) | 述語論理の用語と記号（命題関数、変項、述語、定項、量化子、量化の範囲、自由変項と束縛変項、議論領域） | |
+| [pred-symbolization.md](pred-symbolization.md) | 述語論理の記号化（日本語の文を ∀, ∃ で表す） | 問題39 |
+| [pred-multiple.md](pred-multiple.md) | 二変項の命題関数と多重量化（量化子の順番） | 問題42, 問題43 |
