@@ -15,3 +15,4 @@
 | [pred-symbolization.md](pred-symbolization.md) | 述語論理の記号化（日本語の文を ∀, ∃ で表す） | 問題39 |
 | [pred-multiple.md](pred-multiple.md) | 二変項の命題関数と多重量化（量化子の順番） | 問題42, 問題43 |
 | [pred-multiple2.md](pred-multiple2.md) | 多重量化の記号化練習（量化子の順番、議論領域による違い） | 問題44, 問題45, 問題46 |
+| [pred-interpretation.md](pred-interpretation.md) | 解釈のもとでの真偽（議論領域と述語の意味を決めて判定する） | 例題8, 問題47 |
