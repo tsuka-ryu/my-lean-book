@@ -18,3 +18,4 @@
 | [pred-interpretation.md](pred-interpretation.md) | 解釈のもとでの真偽（議論領域と述語の意味を決めて判定する） | 例題8, 問題47 |
 | [pred-syntax.md](pred-syntax.md) | 述語論理の構文論（LP ＋ 量化子の規則。全称例化） | 問題49, 問題50 |
 | [pred-syntax2.md](pred-syntax2.md) | 述語論理の構文論（全称汎化・存在汎化） | 問題51, 問題52 |
+| [pred-l.md](pred-l.md) | 述語論理の公理系 L（LP ＋ 量化子の規則4つ）。存在例化 | 問題53 |
